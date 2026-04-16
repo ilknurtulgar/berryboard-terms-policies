@@ -1,0 +1,581 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BerryBoard – Terms of Use</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #080a0f;
+        --surface: #0e1118;
+        --border: rgba(255, 255, 255, 0.07);
+        --accent: #e05c8a;
+        --accent2: #f4a0be;
+        --text: #e8e8f0;
+        --muted: #7a7a9a;
+        --heading: #ffffff;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--text);
+        font-family: "DM Sans", sans-serif;
+        font-weight: 300;
+        line-height: 1.8;
+        font-size: 15px;
+        min-height: 100vh;
+      }
+
+      body::before {
+        content: "";
+        position: fixed;
+        inset: 0;
+        background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      body::after {
+        content: "";
+        position: fixed;
+        top: -20%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 700px;
+        height: 700px;
+        background: radial-gradient(
+          circle,
+          rgba(224, 92, 138, 0.1) 0%,
+          transparent 70%
+        );
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: rgba(8, 10, 15, 0.85);
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--border);
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        height: 64px;
+      }
+
+      .logo {
+        font-family: "Syne", sans-serif;
+        font-weight: 800;
+        font-size: 20px;
+        color: var(--heading);
+        letter-spacing: -0.5px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        text-decoration: none;
+      }
+
+      .logo-icon {
+        width: 28px;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 16px;
+      }
+
+      main {
+        position: relative;
+        z-index: 1;
+        max-width: 760px;
+        margin: 0 auto;
+        padding: 80px 40px 120px;
+      }
+
+      .page-label {
+        font-family: "Syne", sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .page-label::before {
+        content: "";
+        width: 24px;
+        height: 1px;
+        background: var(--accent);
+      }
+
+      h1 {
+        font-family: "Syne", sans-serif;
+        font-size: clamp(32px, 5vw, 48px);
+        font-weight: 800;
+        color: var(--heading);
+        line-height: 1.15;
+        letter-spacing: -1px;
+        margin-bottom: 12px;
+      }
+
+      .last-updated {
+        font-size: 13px;
+        color: var(--muted);
+        margin-bottom: 56px;
+        font-style: italic;
+      }
+
+      .section {
+        margin-bottom: 48px;
+        padding-bottom: 48px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .section:last-child {
+        border-bottom: none;
+      }
+
+      h2 {
+        font-family: "Syne", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        color: var(--heading);
+        margin-bottom: 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        letter-spacing: -0.3px;
+      }
+
+      .section-num {
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--accent);
+        font-family: "Syne", sans-serif;
+        background: rgba(224, 92, 138, 0.1);
+        border: 1px solid rgba(224, 92, 138, 0.22);
+        padding: 3px 8px;
+        border-radius: 4px;
+        letter-spacing: 1px;
+      }
+
+      p {
+        color: var(--text);
+        margin-bottom: 14px;
+        opacity: 0.85;
+      }
+
+      p:last-child {
+        margin-bottom: 0;
+      }
+
+      ul {
+        list-style: none;
+        margin: 14px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      ul li {
+        padding-left: 20px;
+        position: relative;
+        opacity: 0.85;
+      }
+
+      ul li::before {
+        content: "—";
+        position: absolute;
+        left: 0;
+        color: var(--accent);
+        font-size: 12px;
+      }
+
+      a {
+        color: var(--accent2);
+        text-decoration: none;
+        border-bottom: 1px solid rgba(244, 160, 190, 0.3);
+        transition: border-color 0.2s;
+      }
+
+      a:hover {
+        border-color: var(--accent2);
+      }
+
+      .callout {
+        background: rgba(224, 92, 138, 0.06);
+        border: 1px solid rgba(224, 92, 138, 0.18);
+        border-left: 3px solid var(--accent);
+        border-radius: 8px;
+        padding: 18px 22px;
+        margin: 20px 0;
+        font-size: 14px;
+        opacity: 0.9;
+      }
+
+      .contact-card {
+        background: var(--surface);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 24px 28px;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .contact-icon {
+        width: 40px;
+        height: 40px;
+        background: rgba(224, 92, 138, 0.1);
+        border: 1px solid rgba(224, 92, 138, 0.22);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+        font-size: 18px;
+      }
+
+      .contact-info {
+        font-size: 13px;
+        color: var(--muted);
+      }
+
+      .contact-info strong {
+        display: block;
+        color: var(--heading);
+        font-size: 14px;
+        font-weight: 500;
+        margin-bottom: 2px;
+      }
+
+      footer {
+        position: relative;
+        z-index: 1;
+        border-top: 1px solid var(--border);
+        padding: 32px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-size: 12px;
+        color: var(--muted);
+      }
+
+      footer .logo {
+        font-size: 16px;
+      }
+
+      @media (max-width: 600px) {
+        header {
+          padding: 0 20px;
+        }
+        main {
+          padding: 48px 24px 80px;
+        }
+        footer {
+          padding: 24px 20px;
+          flex-direction: column;
+          gap: 12px;
+          text-align: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <a class="logo" href="#">
+        BerryBoard
+      </a>
+    </header>
+
+    <main>
+      <div class="page-label">Legal Document</div>
+      <h1>Terms of Use</h1>
+      <p class="last-updated">Last updated: April 16, 2025</p>
+
+      <div class="section">
+        <h2><span class="section-num">01</span> Acceptance of Terms</h2>
+        <p>
+          By downloading, installing, or using BerryBoard ("the App"), developed
+          by İlknur Tulgar ("Developer", "we", "us"), you agree to be bound by
+          these Terms of Use. If you do not agree, please do not use the App.
+        </p>
+        <p>
+          These Terms apply to all users of BerryBoard, regardless of location.
+          Use of the App constitutes your full acceptance of these Terms and any
+          future updates to them.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">02</span> Description of Service</h2>
+        <p>
+          BerryBoard is a real-time collaborative drawing application built with
+          Flutter. It allows users to create, share, and collaborate on digital
+          drawing boards from any device.
+        </p>
+        <div class="callout">
+          Core features include freehand drawing tools, real-time multi-user
+          collaboration, board storage and management, and optional premium
+          features available through a subscription plan. Feature availability
+          may vary by subscription tier and device.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">03</span> User Responsibilities</h2>
+        <p>
+          By using BerryBoard, you agree to use the App responsibly and
+          lawfully. You agree not to:
+        </p>
+        <ul>
+          <li>
+            Create, share, or distribute drawings that contain illegal, harmful,
+            abusive, hateful, or sexually explicit content
+          </li>
+          <li>
+            Use the App to harass, threaten, impersonate, or defame any
+            individual or organisation
+          </li>
+          <li>
+            Attempt to reverse-engineer, decompile, modify, or interfere with
+            the App's systems or underlying code
+          </li>
+          <li>
+            Use automated means (bots, scripts, crawlers) to access or overload
+            the App's services
+          </li>
+          <li>
+            Attempt to gain unauthorised access to another user's boards or
+            account
+          </li>
+          <li>
+            Violate any applicable local, national, or international laws or
+            regulations
+          </li>
+          <li>
+            Generate or share content that infringes on the intellectual
+            property rights of others
+          </li>
+        </ul>
+        <p>
+          We reserve the right to suspend or permanently terminate access for
+          any user who violates these Terms, without prior notice.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">04</span> User-Generated Content</h2>
+        <p>
+          BerryBoard allows you to create and share drawing boards. You retain
+          ownership of the content you create. By using the App, you grant us a
+          limited, non-exclusive licence to store, display, and synchronise your
+          content solely for the purpose of operating the service.
+        </p>
+        <p>
+          You are solely responsible for the content you create, upload, and
+          share within the App. We do not review user-generated content before
+          it is published or shared.
+        </p>
+        <div class="callout">
+          Do not include personal data, confidential information, or third-party
+          intellectual property in your boards without the appropriate rights or
+          permissions.
+        </div>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">05</span> Subscription Plans</h2>
+        <p>
+          BerryBoard offers optional subscription plans (Monthly and Annual)
+          that unlock premium features. Subscriptions are processed and managed
+          through Google Play Billing.
+        </p>
+        <ul>
+          <li>
+            <strong>Billing</strong> — Subscription fees are charged to your
+            Google Play account upon confirmation of purchase.
+          </li>
+          <li>
+            <strong>Auto-renewal</strong> — Subscriptions automatically renew at
+            the end of each billing period unless cancelled at least 24 hours
+            before the renewal date.
+          </li>
+          <li>
+            <strong>Cancellation</strong> — You may cancel your subscription at
+            any time through your Google Play account settings. Cancellation
+            takes effect at the end of the current billing period; no partial
+            refunds are issued for the unused portion of a period.
+          </li>
+          <li>
+            <strong>Price changes</strong> — We reserve the right to adjust
+            subscription pricing. You will be notified of any price changes in
+            advance and given the opportunity to cancel before they take effect.
+          </li>
+          <li>
+            <strong>Free trials</strong> — If a free trial is offered, it will
+            be clearly stated at the time of sign-up. Unused trial days are
+            forfeited upon cancellation.
+          </li>
+        </ul>
+        <p>
+          All subscription transactions are subject to Google Play's own terms
+          and refund policies. For refund requests, please contact Google Play
+          support directly.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">06</span> Intellectual Property</h2>
+        <p>
+          All trademarks, logos, branding, App design, and source code
+          associated with BerryBoard are the intellectual property of İlknur
+          Tulgar. You may not use, copy, reproduce, or distribute any part of
+          the App without prior written permission.
+        </p>
+
+        <p>
+          The visual assets and screenshots displayed on the Google Play Store
+          were designed by <strong>Betül Kara</strong> and are used under
+          license by the Developer.
+        </p>
+
+        <p>
+          The App's UI, iconography, and overall product design are original
+          works and may not be replicated in other products.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">07</span> Disclaimer of Warranties</h2>
+        <p>
+          BerryBoard is provided "as is" and "as available" without warranties
+          of any kind, either express or implied. We do not guarantee that:
+        </p>
+        <ul>
+          <li>
+            The App will be uninterrupted, error-free, or continuously available
+          </li>
+          <li>
+            Real-time synchronisation will be instantaneous or free from latency
+            under all network conditions
+          </li>
+          <li>
+            The App will be free of bugs, viruses, or other harmful components
+          </li>
+          <li>
+            Data stored in the App will never be lost due to technical failure
+          </li>
+        </ul>
+        <p>
+          Your use of the App is entirely at your own risk. We strongly
+          recommend keeping local backups of important creative work.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">08</span> Limitation of Liability</h2>
+        <p>
+          To the fullest extent permitted by applicable law, İlknur Tulgar shall
+          not be liable for any indirect, incidental, special, consequential, or
+          punitive damages arising from your use of or inability to use the App.
+        </p>
+        <p>
+          This includes, but is not limited to, any loss of data, creative work,
+          revenue, or business opportunity resulting from service interruptions,
+          bugs, or other technical issues.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">09</span> Third-Party Services</h2>
+        <p>
+          BerryBoard integrates with third-party services including Google
+          Firebase, RevenueCat, and Google Play Billing. These services operate
+          under their own terms of use and privacy policies, which may also
+          apply to you as a user of BerryBoard.
+        </p>
+        <p>
+          We are not responsible for the practices, availability, or content of
+          these third-party providers. Integration with these services does not
+          constitute an endorsement of them.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">10</span> Changes to Terms</h2>
+        <p>
+          We reserve the right to modify these Terms of Use at any time. Changes
+          will be communicated via an in-app notice or through our website.
+          Continued use of the App after any modifications constitutes your
+          acceptance of the revised Terms.
+        </p>
+        <p>
+          We encourage you to review these Terms periodically to stay informed
+          of any updates.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">11</span> Governing Law</h2>
+        <p>
+          These Terms shall be governed by and construed in accordance with the
+          laws of the Republic of Turkey, without regard to its conflict-of-law
+          principles. Users located in the European Economic Area may
+          additionally have rights under applicable EU consumer protection laws.
+        </p>
+        <p>
+          Any disputes arising from these Terms or your use of the App shall be
+          subject to the exclusive jurisdiction of the courts of Istanbul,
+          Turkey, unless otherwise required by applicable mandatory law.
+        </p>
+      </div>
+
+      <div class="section">
+        <h2><span class="section-num">12</span> Contact</h2>
+        <p>
+          If you have any questions or concerns about these Terms of Use, please
+          contact the developer:
+        </p>
+        <div class="contact-card">
+          <div class="contact-icon">✉️</div>
+          <div class="contact-info">
+            <strong>İlknur Tulgar – BerryBoard Support</strong>
+            <a href="mailto:ilknur.softwaredev@gmail.com"
+              >ilknur.softwaredev@gmail.com</a
+            >
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span class="logo">
+        BerryBoard
+      </span>
+      <span>© 2025 İlknur Tulgar. All rights reserved.</span>
+    </footer>
+  </body>
+</html>

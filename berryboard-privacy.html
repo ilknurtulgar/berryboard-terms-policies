@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BerryBoard – Privacy Policy</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #080a0f;
+    --surface: #0e1118;
+    --border: rgba(255,255,255,0.07);
+    --accent: #e05c8a;
+    --accent2: #f4a0be;
+    --text: #e8e8f0;
+    --muted: #7a7a9a;
+    --heading: #ffffff;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.8;
+    font-size: 15px;
+    min-height: 100vh;
+  }
+
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  body::after {
+    content: '';
+    position: fixed;
+    top: -20%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    height: 700px;
+    background: radial-gradient(circle, rgba(224,92,138,0.10) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(8,10,15,0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    height: 64px;
+  }
+
+  .logo {
+    font-family: 'Syne', sans-serif;
+    font-weight: 800;
+    font-size: 20px;
+    color: var(--heading);
+    letter-spacing: -0.5px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+  }
+
+  main {
+    position: relative;
+    z-index: 1;
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 80px 40px 120px;
+  }
+
+  .page-label {
+    font-family: 'Syne', sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .page-label::before {
+    content: '';
+    width: 24px;
+    height: 1px;
+    background: var(--accent);
+  }
+
+  h1 {
+    font-family: 'Syne', sans-serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 800;
+    color: var(--heading);
+    line-height: 1.15;
+    letter-spacing: -1px;
+    margin-bottom: 12px;
+  }
+
+  .last-updated {
+    font-size: 13px;
+    color: var(--muted);
+    margin-bottom: 56px;
+    font-style: italic;
+  }
+
+  .section {
+    margin-bottom: 48px;
+    padding-bottom: 48px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .section:last-child { border-bottom: none; }
+
+  h2 {
+    font-family: 'Syne', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    letter-spacing: -0.3px;
+  }
+
+  .section-num {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--accent);
+    font-family: 'Syne', sans-serif;
+    background: rgba(224,92,138,0.10);
+    border: 1px solid rgba(224,92,138,0.22);
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 1px;
+  }
+
+  p {
+    color: var(--text);
+    margin-bottom: 14px;
+    opacity: 0.85;
+  }
+
+  p:last-child { margin-bottom: 0; }
+
+  ul {
+    list-style: none;
+    margin: 14px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  ul li {
+    padding-left: 20px;
+    position: relative;
+    opacity: 0.85;
+  }
+
+  ul li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-size: 12px;
+  }
+
+  a {
+    color: var(--accent2);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(244,160,190,0.3);
+    transition: border-color 0.2s;
+  }
+
+  a:hover { border-color: var(--accent2); }
+
+  .callout {
+    background: rgba(224,92,138,0.06);
+    border: 1px solid rgba(224,92,138,0.18);
+    border-left: 3px solid var(--accent);
+    border-radius: 8px;
+    padding: 18px 22px;
+    margin: 20px 0;
+    font-size: 14px;
+    opacity: 0.9;
+  }
+
+  .contact-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 28px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .contact-icon {
+    width: 40px;
+    height: 40px;
+    background: rgba(224,92,138,0.10);
+    border: 1px solid rgba(224,92,138,0.22);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    font-size: 18px;
+  }
+
+  .contact-info { font-size: 13px; color: var(--muted); }
+
+  .contact-info strong {
+    display: block;
+    color: var(--heading);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  footer {
+    position: relative;
+    z-index: 1;
+    border-top: 1px solid var(--border);
+    padding: 32px 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  footer .logo { font-size: 16px; }
+
+  @media (max-width: 600px) {
+    header { padding: 0 20px; }
+    main { padding: 48px 24px 80px; }
+    footer { padding: 24px 20px; flex-direction: column; gap: 12px; text-align: center; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <a class="logo" href="#">
+    BerryBoard
+  </a>
+</header>
+
+<main>
+  <div class="page-label">Legal Document</div>
+  <h1>Privacy Policy</h1>
+  <p class="last-updated">Last updated: April 16, 2025</p>
+
+  <div class="section">
+    <h2><span class="section-num">01</span> Introduction</h2>
+    <p>BerryBoard ("we", "our", or "us"), developed by İlknur Tulgar, is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and handle information when you use our real-time collaborative drawing application.</p>
+    <p>By downloading or using BerryBoard, you agree to the collection and use of information as described in this policy. If you do not agree, please do not use the App.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">02</span> Information We Collect</h2>
+    <p>We collect only the information necessary to provide and improve our service:</p>
+    <ul>
+      <li><strong>Account information</strong> — When you sign in via Firebase Authentication, we collect your e-mail address and display name to identify your account and enable collaboration features.</li>
+      <li><strong>Drawing data</strong> — Stroke coordinates, canvas states, and board metadata are stored in Firebase Realtime Database and Firebase Storage to enable real-time synchronisation and session persistence.</li>
+      <li><strong>Subscription status</strong> — We use RevenueCat and Google Play Billing to manage subscriptions. We receive your subscription tier and renewal status only; your payment card details are never shared with us.</li>
+      <li><strong>Device information</strong> — Device model and operating system version are collected via Firebase Crashlytics solely for crash reporting and performance diagnostics.</li>
+    </ul>
+    <div class="callout">
+      We do not build advertising profiles, sell your data, or share it with third parties beyond what is strictly necessary to operate the services listed above.
+    </div>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">03</span> How We Use Your Information</h2>
+    <p>Information collected is used solely to:</p>
+    <ul>
+      <li>Authenticate and identify users to enable secure access and collaboration</li>
+      <li>Synchronise drawing boards in real time across multiple devices and users</li>
+      <li>Store and retrieve your saved boards and favourite canvases</li>
+      <li>Manage your subscription plan and unlock premium features accordingly</li>
+      <li>Diagnose crashes and improve the stability and performance of the App</li>
+      <li>Detect and prevent abuse or violations of our Terms of Use</li>
+    </ul>
+    <p>We do not use your data for advertising, behavioural profiling, or any purpose beyond what is required to provide and improve BerryBoard.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">04</span> Firebase Services</h2>
+    <p>BerryBoard is built on Google Firebase, which includes Authentication, Realtime Database, Cloud Storage, and Crashlytics. These services are operated by Google LLC and are subject to Google's own privacy policies and data processing terms.</p>
+    <p>Data stored in Firebase may be processed on servers located outside your country. Google implements appropriate safeguards for international data transfers, including Standard Contractual Clauses where required.</p>
+    <p>We encourage you to review <a href="https://firebase.google.com/support/privacy" target="_blank">Firebase's Privacy and Security documentation</a> for full details.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">05</span> Subscription & Payment Data</h2>
+    <p>Subscription management is handled through RevenueCat in conjunction with Google Play Billing. When you purchase a subscription:</p>
+    <ul>
+      <li>Payment processing is performed entirely by Google Play — we never receive or store your card or banking details.</li>
+      <li>RevenueCat provides us with your subscription status, product identifier, and renewal information to activate the correct features in the App.</li>
+      <li>RevenueCat may assign an anonymous user identifier to track entitlements across sessions.</li>
+    </ul>
+    <p>For details on how RevenueCat handles data, please review the <a href="https://www.revenuecat.com/privacy" target="_blank">RevenueCat Privacy Policy</a>.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">06</span> Data Storage & Retention</h2>
+    <p>Your account data and drawing boards are retained for as long as your account is active. If you delete a board or asset, it is removed from Firebase Storage and the Realtime Database promptly.</p>
+    <p>Crash and diagnostic logs collected via Crashlytics are retained for up to 90 days. Anonymised usage analytics, if collected, are retained for no longer than 12 months.</p>
+    <p>Upon account deletion (requested via the contact details below), we will delete your personally identifiable information within 30 days, except where we are required to retain it by law.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">07</span> Data Security</h2>
+    <p>We take reasonable technical measures to protect your data, including:</p>
+    <ul>
+      <li>Encrypted transmission (HTTPS/TLS) for all data in transit</li>
+      <li>Firebase Security Rules to restrict database and storage access to authorised users only</li>
+      <li>Authentication tokens managed securely by Firebase Authentication</li>
+    </ul>
+    <p>However, no method of transmission or storage is 100% secure. We advise you not to include sensitive personal information in your board names or drawing content.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">08</span> Children's Privacy</h2>
+    <p>BerryBoard is not directed at children under the age of 13 (or 16 in jurisdictions such as the EU/EEA). We do not knowingly collect personal data from children. If you believe a child has registered and provided personal data, please contact us immediately so we can take appropriate action.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">09</span> Your Rights (GDPR / KVKK)</h2>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li>The right to access the personal data we hold about you</li>
+      <li>The right to correct inaccurate or incomplete data</li>
+      <li>The right to request deletion of your data ("right to be forgotten")</li>
+      <li>The right to restrict or object to certain processing activities</li>
+      <li>The right to data portability (where technically applicable)</li>
+      <li>The right to withdraw consent at any time (where processing is based on consent)</li>
+    </ul>
+    <p>Users in Turkey are additionally protected under the Personal Data Protection Law (KVKK No. 6698). To exercise any of the above rights, please contact us using the details in Section 11. We will respond within 30 days in accordance with applicable law.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">10</span> Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Any significant changes will be communicated through the App or on our website. We encourage you to review this policy periodically.</p>
+    <p>Continued use of the App after changes take effect constitutes your acceptance of the updated policy.</p>
+  </div>
+
+  <div class="section">
+    <h2><span class="section-num">11</span> Contact</h2>
+    <p>For any privacy-related questions, data requests, or concerns, please contact the developer directly:</p>
+    <div class="contact-card">
+      <div class="contact-icon">✉️</div>
+      <div class="contact-info">
+        <strong>İlknur Tulgar – BerryBoard Privacy</strong>
+        <a href="mailto:ilknur.softwaredev@gmail.com">ilknur.softwaredev@gmail.com</a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <span class="logo">
+    BerryBoard
+  </span>
+  <span>© 2025 İlknur Tulgar. All rights reserved.</span>
+</footer>
+
+</body>
+</html>
