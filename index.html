@@ -212,7 +212,7 @@
       min-height: calc(100vh - 64px);
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       scroll-margin-top: 64px;
       box-sizing: border-box;
       padding: 40px 0;
@@ -451,8 +451,8 @@
 
     .phone-mockup {
       position: relative;
-      width: 280px;
-      height: 586px;
+      width: 240px;
+      height: 502px;
       background: transparent;
       border: none;
       border-radius: 0;
@@ -504,9 +504,9 @@
     .widget-section {
       display: flex;
       align-items: center;
-      gap: 60px;
-      margin-bottom: 40px;
-      padding: 60px 48px;
+      gap: 40px;
+      margin-bottom: 20px;
+      padding: 40px 32px;
       background: linear-gradient(180deg, rgba(14, 17, 24, 0.6) 0%, rgba(8, 10, 15, 0.4) 100%);
       border: 1px solid var(--border);
       border-radius: 24px;
@@ -572,7 +572,7 @@
 
     .gallery-section {
       text-align: center;
-      margin-bottom: 100px;
+      margin-bottom: 40px;
     }
 
     .gallery-section h2 {
@@ -606,12 +606,12 @@
     }
 
     .carousel-spacer {
-      flex: 0 0 calc(50% - 140px);
+      flex: 0 0 calc(50% - 120px);
       pointer-events: none;
     }
 
     .carousel-slide {
-      flex: 0 0 280px;
+      flex: 0 0 240px;
       scroll-snap-align: center;
       transition: transform 0.4s ease, opacity 0.4s ease;
       opacity: 0.4;
@@ -881,9 +881,7 @@
     <section class="section gallery-section" id="gallery">
       <div class="page-label">App Gallery</div>
       <h2>Take a Look Inside</h2>
-      <p style="color: var(--muted); max-width: 500px; margin: 0 auto 30px;">
-        Explore the clean, intuitive, and modern user interface designed to maximize your joint creativity.
-      </p>
+
 
       <div class="carousel-container">
         <div class="carousel-track-wrapper" id="carouselTrack">
